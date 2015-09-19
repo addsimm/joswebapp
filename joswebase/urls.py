@@ -14,6 +14,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    # url('', include('social.apps.django_app.urls', namespace = 'social')),
+    url('', include('django.contrib.auth.urls', namespace='auth')),
+    url('', include('social.apps.django_app.urls', namespace = 'social')),
     url(r'^$', 'joswebase.views.tempindex', name = 'tempindex')
 )
