@@ -30,3 +30,6 @@ handlers:
 - url: /.*
   script: djangoappengine.main.application
 
+libraries:
+- name: ssl
+  version: latest
