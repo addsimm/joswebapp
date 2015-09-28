@@ -8,13 +8,35 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Adam', 'adam@joinourstory.com'),
+    ('AdamFS', 'adam@joinourstory.com'),
 )
 
 MANAGERS = ADMINS
 
 # Activate django-dbindexer for the default database
-DATABASES['default'] = {'ENGINE': 'dbindexer', 'TARGET': DATABASES['default']}
+DATABASES['default'] = {'ENGINE': 'dbindexer',
+                        'TARGET': DATABASES['default']
+                        }
+
+# AS Added Google Cloud SQL:
+
+# from djangoappengine.utils import on_production_server
+# print("production server:", on_production_server)
+#
+# if on_production_server:
+#     DATABASES['sql'] = {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'HOST': '/cloudsql/joswebbase:joswebbasecloudsqlinstance',
+#         'NAME': 'joswebbasecloudsqlinstance ',
+#         'USER': 'root',
+#     }
+# else:
+#     DATABASES['sql'] = {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'joswebbasesqldevelopment',
+#         'USER': 'root',
+#         'PASSWORD': 'boner', # todo Fill in <-
+#     }
 
 AUTOLOAD_SITECONF = 'indexes'
 

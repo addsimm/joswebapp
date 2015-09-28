@@ -7,7 +7,6 @@ threadsafe: yes
 builtins:
 - remote_api: on
 
-
 inbound_services:
 - warmup
 
@@ -32,4 +31,6 @@ handlers:
 
 libraries:
 - name: ssl
+  version: latest
+- name: MySQLdb
   version: latest
